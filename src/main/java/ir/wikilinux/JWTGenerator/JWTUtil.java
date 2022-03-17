@@ -21,7 +21,7 @@ public class JWTUtil {
 	public static String getHeader(String jwtString) {
 		
 		String chunks[] = jwtString.split("\\.");
-		String header = new String(decoder.decode(chunks[1]));
+		String header = new String(decoder.decode(chunks[0]));
 		
 		return header;
 		
